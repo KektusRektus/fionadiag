@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.spec
+*.egg-info/
+# osobní data z motorky – necommitovat
+logs/
+*.jsonl
+melco_com_*.log
+report_*.txt
+report_*.json
+learned_methods*.json
+EnDtcM.dll

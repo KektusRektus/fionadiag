@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fionadiag"
+dynamic = ["version"]
+description = "Diagnostika Ducati SuperSport 950 (ECU, ABS, BBS, přístrojovka, IMU) přes ELM327"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["pyserial>=3.5"]
+
+[project.scripts]
+fionadiag = "fionadiag.__main__:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "fionadiag.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["fionadiag*"]
+
+[tool.setuptools.package-data]
+fionadiag = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
